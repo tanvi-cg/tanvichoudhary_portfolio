@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #003366;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #80bfff;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 8%;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    color: #003366;
+}
+
+.bio {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem;
+}
+
+.hero-img img {
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #0059b3;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0073e6;
+    transform: scale(1.05);
+}
+
+section {
+    width: 85%;
+    margin: 40px auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #003366;
+    border-left: 4px solid #0073e6;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.about-flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.skill-card {
+    background: #e6f0ff;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: #e6f2ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    background: #d9e9ff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #0059b3;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.3rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0073e6;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    background: #003366;
+    color: white;
+    margin-top: 30px;
+}
+
+.fade-in {
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+    .hero-img img {
+        width: 200px;
+    }
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
